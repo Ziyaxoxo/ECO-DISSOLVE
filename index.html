@@ -3,268 +3,318 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ECO-DISSOLVE — Ecomelt | Waste to Wealth</title>
-    <meta name="description" content="ECO-DISSOLVE - Revolutionary Chemical Plastic Recycling for Environmental Restoration by Team Ecomelt. Waste to Wealth through room-temperature bio-compatible dissolution and enzymatic depolymerization." />
+    <title>ECO-DISSOLVE by ECOMELT — Waste to Wealth</title>
+    <meta name="description" content="ECO-DISSOLVE - Revolutionary Chemical Plastic Recycling for Environmental Restoration. Room-temperature bio-compatible dissolution with enzyme-assisted breakdown, turning plastic waste into wealth." />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header" id="siteHeader" role="banner" aria-label="Primary">
+    <header class="site-header" data-auto-hide="true">
       <div class="container header-inner">
-        <a class="brand" href="#intro" aria-label="Ecomelt Home">
-          <span class="brand-mark" aria-hidden="true">E</span>
-          <span class="brand-text">
-            <strong>Ecomelt</strong>
-            <span class="brand-sub">Waste → Wealth</span>
-          </span>
-        </a>
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
-          <span class="nav-toggle-bar"></span>
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">♻︎</span>
+          <div class="brand-text">
+            <span class="brand-top">Team: ECOMELT</span>
+            <span class="brand-bottom">ECO-DISSOLVE</span>
+          </div>
+        </div>
+
+        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
         </button>
-        <nav id="siteNav" class="site-nav" aria-label="Main navigation">
-          <ul>
-            <li><a href="#intro">Overview</a></li>
-            <li><a href="#highlights">Highlights</a></li>
-            <li><a href="#solution">Solution</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#impact">Waste → Wealth</a></li>
-            <li><a href="#calculator">Calculator</a></li>
-            <li><a href="#references">References</a></li>
-          </ul>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="#overview">Overview</a>
+          <a href="#process">Process</a>
+          <a href="#impact">Impact</a>
+          <a href="#simulator">Simulator</a>
+          <a href="#scalability">Scalability</a>
+          <a href="#references">References</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
-       Intro 
-      <section id="intro" class="section section-hero">
-        <div class="container hero-grid">
+       Hero 
+      <section id="overview" class="section hero">
+        <div class="container hero-inner">
           <div class="hero-copy">
             <h1 class="text-balance">ECO-DISSOLVE — Revolutionary Chemical Plastic Recycling for Environmental Restoration</h1>
             <p class="lead text-pretty">
-              Team Ecomelt transforms hard‑to‑recycle plastics into virgin‑quality materials at room temperature using bio‑compatible solvents and advanced enzymes — turning Waste into Wealth for communities and the planet.
+              Turning plastic <strong>waste</strong> into <strong>wealth</strong> using room‑temperature, bio‑compatible dissolution and enzyme‑assisted depolymerization to create virgin‑quality recycled materials.
             </p>
             <div class="hero-cta">
-              <a class="btn btn-primary" href="#calculator">Calculate Your Impact</a>
-              <a class="btn btn-outline" href="#process">See How It Works</a>
+              <a class="btn btn-primary" href="#simulator">Try the Waste→Wealth Simulator</a>
+              <a class="btn btn-outline" href="#references">View Research & Sources</a>
             </div>
-            <ul class="hero-points">
-              <li>95% depolymerization of PET demonstrated</li>
-              <li>3–10× lower energy than traditional chemical recycling</li>
-              <li>95% solvent recovery in a circular process</li>
-              <li>Zero harsh chemicals; enzyme‑assisted selectivity</li>
+
+            <ul class="stats">
+              <li>
+                <span class="stat-number">95%</span>
+                <span class="stat-label">Depolymerization efficiency (PET)</span>
+              </li>
+              <li>
+                <span class="stat-number">3–10×</span>
+                <span class="stat-label">Lower energy vs. traditional methods</span>
+              </li>
+              <li>
+                <span class="stat-number">95%</span>
+                <span class="stat-label">Solvent recovery for circularity</span>
+              </li>
             </ul>
           </div>
-          <aside class="hero-aside" aria-label="At a glance">
-            <div class="stat card">
-              <div class="stat-number">1,000 t/yr</div>
-              <div class="stat-label">Plastic diverted (pilot)</div>
-            </div>
-            <div class="stat card">
-              <div class="stat-number">1,200 tCO₂e</div>
-              <div class="stat-label">Emissions avoided annually</div>
-            </div>
-            <div class="stat card">
-              <div class="stat-number">80%</div>
-              <div class="stat-label">Water pollution reduction</div>
-            </div>
-          </aside>
+          <div class="hero-panel" aria-hidden="true">
+            <div class="chip">Room Temperature</div>
+            <div class="chip">Bio‑Compatible</div>
+            <div class="chip">Enzyme‑Assisted</div>
+            <div class="chip">Virgin‑Quality Output</div>
+          </div>
         </div>
       </section>
 
-       KPI Highlights 
-      <section id="highlights" class="section">
+       Waste → Wealth Highlight 
+      <section class="section highlight">
         <div class="container">
-          <h2 class="section-title text-balance">Key Advantages</h2>
-          <div class="kpi-grid">
-            <div class="kpi-card card">
-              <div class="kpi-value">95%</div>
-              <div class="kpi-label">Depolymerization (PET)</div>
+          <div class="highlight-grid">
+            <div class="highlight-card">
+              <h2 class="text-balance">Waste → Wealth</h2>
+              <p class="text-pretty">
+                ECO-DISSOLVE converts mixed and contaminated plastics once destined for landfills into high-value monomers and polymers. This enables food‑grade outputs and new revenue streams while restoring ecosystems.
+              </p>
+              <ul class="checklist">
+                <li>Processes mixed and contaminated waste</li>
+                <li>Generates virgin‑quality recycled materials</li>
+                <li>Supports community livelihoods and jobs</li>
+                <li>Designed for urban and rural deployments</li>
+              </ul>
             </div>
-            <div class="kpi-card card">
-              <div class="kpi-value">3–10×</div>
-              <div class="kpi-label">Lower Energy Use</div>
-            </div>
-            <div class="kpi-card card">
-              <div class="kpi-value">95%</div>
-              <div class="kpi-label">Solvent Recovery</div>
-            </div>
-            <div class="kpi-card card">
-              <div class="kpi-value">0</div>
-              <div class="kpi-label">Harsh Chemicals</div>
+            <div class="highlight-metrics">
+              <div class="kpi">
+                <div class="kpi-number" data-countup="1000">0</div>
+                <div class="kpi-label">tons/year waste diverted (pilot)</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-number" data-countup="1200">0</div>
+                <div class="kpi-label">tons CO₂e avoided annually</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-number" data-countup="80">0</div>
+                <div class="kpi-label">% reduction in water pollution</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi-number" data-countup="95">0</div>
+                <div class="kpi-label">% solvent recovery</div>
+              </div>
             </div>
           </div>
-
-           Supporting visual from your provided source URL (below the cards as requested) 
-          <figure class="supporting-figure">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-MLBGJg0JweN2kMZ0Me71EcZa5V9ar0.png"
-              alt="Supporting visual of four KPI cards showing 95% depolymerization, 3–10× lower energy, 95% solvent recovery, and 0 harsh chemicals."
-              loading="lazy"
-            />
-          </figure>
         </div>
       </section>
 
-       Problem 
-      <section id="problem" class="section section-muted">
-        <div class="container prose">
-          <h2 class="section-title">The Plastic Crisis We Solve</h2>
-          <p>
-            India generates over <strong>3.4 million tons</strong> of plastic waste annually with only ~30% effectively recycled. The rest pollutes land and water,
-            while globally only ~9% of plastics are recycled. Traditional methods struggle with contaminated and mixed waste and suffer major quality degradation.
-          </p>
-          <ul>
-            <li>360 million tons of plastic waste generated globally each year</li>
-            <li>50% landfilled, 19% incinerated, 22% in uncontrolled dumpsites</li>
-            <li>High energy demand in current chemical recycling (400–700°C)</li>
-          </ul>
-        </div>
-      </section>
-
-       Solution 
-      <section id="solution" class="section">
-        <div class="container prose">
-          <h2 class="section-title">Our Solution: Room‑Temperature Bio‑Dissolution</h2>
-          <p>
-            ECO‑DISSOLVE uses bio‑compatible amines (e.g., ethylenediamine, propanediamine) to dissolve plastic polymers at room temperature,
-            followed by enzyme‑assisted depolymerization for selective targeting. The process is <strong>safe, circular, and efficient</strong>.
-          </p>
-          <ul>
-            <li>95% depolymerization of PET at room temperature (JBEI/LBNL)</li>
-            <li>Dual‑enzyme systems increase activity by up to 10,000×</li>
-            <li>Halogen‑free, minimal environmental impact, and 95% solvent recovery</li>
-          </ul>
-        </div>
-      </section>
-
-       Process 
-      <section id="process" class="section section-muted">
+       Process Flow 
+      <section id="process" class="section process">
         <div class="container">
-          <h2 class="section-title">How It Works</h2>
-          <ol class="process-flow">
-            <li>
-              <h3>Collection & Pre‑Sorting</h3>
-              <p>Mixed and contaminated waste streams accepted, minimal sorting required.</p>
+          <h2 class="section-title text-balance">How It Works</h2>
+          <ol class="process-flow" aria-label="Technology process flow">
+            <li class="step">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M3 7h18v10H3zM5 9v6h14V9z"/></svg>
+              </div>
+              <h3>Collection</h3>
+              <p>Plastic waste collection and pre‑sorting of incoming streams.</p>
             </li>
-            <li>
-              <h3>Bio‑Compatible Dissolution</h3>
-              <p>Room‑temperature dissolution using safe amines to unlock polymer chains.</p>
+            <li class="step">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M3 4h18v4H3V4zm0 6h18v10H3V10z"/></svg>
+              </div>
+              <h3>Dissolution Bath</h3>
+              <p>Room‑temperature dissolution using bio‑compatible amine solvents.</p>
             </li>
-            <li>
+            <li class="step">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l4 8h-8l4-8zm0 20a6 6 0 100-12 6 6 0 000 12z"/></svg>
+              </div>
               <h3>Enzymatic Treatment</h3>
-              <p>Selective depolymerization to monomers using high‑activity enzyme systems.</p>
+              <p>Selective enzyme action for mixed plastics with high activity.</p>
             </li>
-            <li>
-              <h3>Recovery & Purification</h3>
-              <p>Monomers recovered and purified; solvents captured and recycled (95%).</p>
+            <li class="step">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h16v4H4zm0 6h16v10H4z"/></svg>
+              </div>
+              <h3>Monomer Recovery</h3>
+              <p>Separation and capture of monomers for re‑polymerization.</p>
             </li>
-            <li>
-              <h3>Virgin‑Quality Output</h3>
-              <p>Food‑grade, manufacturer‑ready materials enabling true circularity.</p>
+            <li class="step">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M5 4h14v6H5zM3 12h18v8H3z"/></svg>
+              </div>
+              <h3>Purification</h3>
+              <p>Refinement to virgin‑quality feedstock suitable for packaging.</p>
             </li>
           </ol>
         </div>
       </section>
 
-       Waste to Wealth Impact 
-      <section id="impact" class="section">
+       Technical Approach 
+      <section class="section technical">
         <div class="container">
-          <h2 class="section-title">Waste → Wealth Outcomes</h2>
+          <h2 class="section-title">Technical Approach</h2>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Bio‑Compatible Solvents</h3>
+              <p>Room‑temperature dissolution with amines like ethylenediamine and propanediamine—halogen‑free, low toxicity, high selectivity.</p>
+            </article>
+            <article class="card">
+              <h3>Enzyme‑Assisted Breakdown</h3>
+              <p>Dual‑enzyme systems with up to 10,000× activity for mixed plastic streams without degrading quality.</p>
+            </article>
+            <article class="card">
+              <h3>Energy Efficiency</h3>
+              <p>3–10× lower energy consumption than thermal chemical recycling (no 400–700°C stage).</p>
+            </article>
+            <article class="card">
+              <h3>Circular Solvent Loop</h3>
+              <p>95% solvent recovery through closed‑loop purification and reuse for near‑zero waste operations.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+       Impact 
+      <section id="impact" class="section impact">
+        <div class="container">
+          <h2 class="section-title">Environmental & Social Impact</h2>
           <div class="impact-grid">
-            <div class="impact-card card">
+            <div class="impact-col">
               <h3>Environmental</h3>
-              <ul>
-                <li>Lower energy use by 3–10× vs. traditional chemical recycling</li>
-                <li>Zero harsh chemicals and near‑zero toxic emissions</li>
-                <li>80% reduction in water pollution from plastic waste</li>
+              <ul class="bullet">
+                <li>Plastic diverted from landfills and open environments</li>
+                <li>CO₂e emissions avoided through low‑energy processing</li>
+                <li>Water pollution reduced by up to 80%</li>
+                <li>Virgin‑quality outputs enable food‑grade applications</li>
               </ul>
             </div>
-            <div class="impact-card card">
-              <h3>Economic</h3>
-              <ul>
-                <li>High‑value virgin‑quality materials from mixed, contaminated streams</li>
-                <li>Solvent recovery (95%) reduces operating costs</li>
-                <li>Modular, scalable units for urban and rural deployments</li>
-              </ul>
-            </div>
-            <div class="impact-card card">
+            <div class="impact-col">
               <h3>Social</h3>
-              <ul>
-                <li>50+ direct jobs per 1,000 t/year pilot facility</li>
-                <li>200+ indirect jobs across collection and logistics</li>
-                <li>Community health uplift via cleaner environments</li>
+              <ul class="bullet">
+                <li>50+ direct jobs; 200+ indirect jobs (pilot)</li>
+                <li>Skill development for waste management workers</li>
+                <li>Community health improvements from cleaner surroundings</li>
+                <li>Educational outreach and open‑source knowledge sharing</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-       Calculator 
-      <section id="calculator" class="section section-muted">
+       Simulator 
+      <section id="simulator" class="section simulator">
         <div class="container">
-          <h2 class="section-title">Impact Calculator</h2>
-          <form class="calc" aria-describedby="calc-help" onsubmit="return false;">
-            <label for="tonsPerMonth">Plastic processed per month (tons)</label>
-            <input id="tonsPerMonth" type="number" min="0" step="1" value="50" inputmode="numeric" />
-            <p id="calc-help" class="calc-help">
-              Annualized metrics use figures from the ECO‑DISSOLVE brief (e.g., 1.2 tCO₂e avoided per ton/year, 95% monomer yield).
-            </p>
-            <div class="calc-actions">
-              <button class="btn btn-primary" id="calcBtn" type="button">Update Impact</button>
-              <button class="btn btn-outline" id="resetBtn" type="button">Reset</button>
+          <h2 class="section-title text-balance">Waste → Wealth Simulator</h2>
+          <p class="sim-desc">Estimate outcomes based on monthly plastic input. Assumptions derived from lab and pilot data (PET: 95% depolymerization; solvent recovery: 95%; energy savings: 3–10×).</p>
+
+          <form class="sim-form" aria-describedby="sim-notes">
+            <div class="form-row">
+              <label for="input-tons">Monthly plastic input (tons)</label>
+              <input id="input-tons" type="range" min="10" max="1000" step="10" value="200" />
+              <div class="range-value"><output for="input-tons" id="val-tons">200</output> tons</div>
+            </div>
+
+            <div class="form-row">
+              <label for="contamination">Contamination level (%)</label>
+              <input id="contamination" type="range" min="0" max="30" step="1" value="10" />
+              <div class="range-value"><output for="contamination" id="val-contam">10</output>%</div>
+            </div>
+
+            <div class="form-row">
+              <label for="stream">Plastic stream</label>
+              <select id="stream">
+                <option value="pet" selected>PET-dominant</option>
+                <option value="mixed">Mixed packaging</option>
+                <option value="ewaste">E-waste plastics (polycarbonates)</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="baseline-energy">Baseline energy (kWh/kg)</label>
+              <input id="baseline-energy" type="number" min="0.2" step="0.1" value="1.0" />
             </div>
           </form>
 
-          <div class="results-grid" id="results">
-            <div class="result card">
-              <div class="result-label">Virgin‑quality monomers (monthly)</div>
-              <div class="result-value" id="outMonomers">—</div>
-              <div class="result-unit">tons/month</div>
+          <div class="sim-results" role="region" aria-live="polite">
+            <div class="result-card">
+              <div class="result-label">Estimated monomer yield</div>
+              <div class="result-value"><span id="yield-tons">0</span> tons/month</div>
             </div>
-            <div class="result card">
-              <div class="result-label">CO₂e avoided (annualized)</div>
-              <div class="result-value" id="outCO2">—</div>
-              <div class="result-unit">tons/year</div>
+            <div class="result-card">
+              <div class="result-label">Energy used (new)</div>
+              <div class="result-value"><span id="energy-new">0</span> MWh/month</div>
+              <div class="bar-wrap" aria-hidden="true">
+                <div class="bar bar-old" id="bar-old" title="Baseline"></div>
+                <div class="bar bar-new" id="bar-new" title="ECO-DISSOLVE"></div>
+              </div>
             </div>
-            <div class="result card">
-              <div class="result-label">Energy reduction (vs. traditional)</div>
-              <div class="result-value" id="outEnergy">—</div>
-              <div class="result-unit">percent</div>
+            <div class="result-card">
+              <div class="result-label">Energy saved vs. baseline</div>
+              <div class="result-value"><span id="energy-saved">0</span> MWh/month</div>
             </div>
-            <div class="result card">
-              <div class="result-label">Estimated direct jobs (annualized)</div>
-              <div class="result-value" id="outJobs">—</div>
-              <div class="result-unit">people</div>
+            <div class="result-card">
+              <div class="result-label">CO₂e avoided (est.)</div>
+              <div class="result-value"><span id="co2-avoided">0</span> tons/month</div>
             </div>
-            <div class="result card">
-              <div class="result-label">Solvent recovered</div>
-              <div class="result-value" id="outSolvent">—</div>
-              <div class="result-unit">percent</div>
+            <div class="result-note" id="sim-notes">
+              Estimates assume solvent recovery at 95% and energy reduction factor of ~0.3 (3.3× lower). PET yield factor 0.95; mixed 0.85; e‑waste plastics 0.80. CO₂e avoided estimated ~1.2 tons per ton processed (pilot scale).
             </div>
+          </div>
+        </div>
+      </section>
+
+       Scalability & Sustainability 
+      <section id="scalability" class="section scalability">
+        <div class="container">
+          <h2 class="section-title">Scalability & Sustainability</h2>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Modular & Mobile</h3>
+              <p>Standardized modules and mobile units enable rapid deployment, including rural operations close to waste sources.</p>
+            </article>
+            <article class="card">
+              <h3>Open Knowledge</h3>
+              <p>Open documentation, training, and research partnerships accelerate adoption and continuous improvement.</p>
+            </article>
+            <article class="card">
+              <h3>Economics</h3>
+              <p>Revenues from processing fees, material sales, and carbon credits support long‑term viability with community ownership.</p>
+            </article>
+            <article class="card">
+              <h3>Policy & RLS</h3>
+              <p>Supportive regulations and local stewardship drive sustainable growth and equitable benefit sharing.</p>
+            </article>
           </div>
         </div>
       </section>
 
        References 
-      <section id="references" class="section">
-        <div class="container prose">
+      <section id="references" class="section references">
+        <div class="container">
           <h2 class="section-title">References</h2>
-          <ul>
-            <li>Joint BioEnergy Institute (LBNL): Room‑temperature PET depolymerization using bio‑compatible amines (2025).</li>
-            <li>ACS Chemical Reviews: Advanced dual‑enzyme systems for mixed plastic processing.</li>
-            <li>Our World in Data, Statista: Plastic waste generation and global recycling rates.</li>
+          <ul class="refs">
+            <li>Lawrence Berkeley National Laboratory — JBEI breakthrough: 95% PET depolymerization at room temperature using bio‑compatible amines.</li>
+            <li>ACS Chemical Reviews — Dual enzyme systems with 10,000× activity; selective polymer bond targeting.</li>
+            <li>Our World in Data; Statista — Global and India plastic waste and recycling statistics.</li>
           </ul>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p><strong>Ecomelt</strong> — Smart India Hackathon 2025 Submission | Problem Statement #60</p>
-        <p>ECO‑DISSOLVE · Revolutionary Chemical Plastic Recycling for Environmental Restoration</p>
+      <div class="container footer-inner">
+        <div>
+          <strong>Team ECOMELT</strong> — Smart India Hackathon 2025 • Problem Statement #60
+          <div class="muted">ECO-DISSOLVE: People and planet over profit. Together, we dissolve the plastic problem.</div>
+        </div>
+        <a class="btn btn-outline" href="#overview">Back to top</a>
       </div>
     </footer>
 
