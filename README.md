@@ -37,12 +37,6 @@ India generates **1.7 lakh tonnes of municipal solid waste daily**, with only **
 - **Sustainability:** Promotes a **Waste to Wealth** circular economy model  
 
 
-
-## 👩‍💻 Team – DeshSwadesh  
-A passionate group of Engineering innovators, committed to creating **Waste to Wealth solutions** that empower sustainability and environmental restoration.  
-
----
-
 ## 📌 Future Scope  
 - Industrial-scale deployment for large waste streams  
 - IoT-based real-time monitoring of waste conversion  
