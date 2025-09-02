@@ -10,8 +10,7 @@ ECO-DISSOLVE is a **Waste to Wealth innovation** that goes beyond traditional re
 
 
 ## 🌱 Problem Statement  
-India generates **1.7 lakh tonnes of municipal solid waste daily**, with only **54% scientifically treated**. The rest ends up in landfills, oceans, or open burning — causing pollution, greenhouse gases, and massive resource losses.  
-
+India generates over 26,000 tonnes of plastic waste daily, yet only about 9% is recycled, often downcycled into low-grade products like PVC. The rest largely ends up in landfills, incinerators, or the open environment, where it persists for centuries, polluting soil, water, and air. Conventional recycling merely changes plastic’s form without solving the root problem, creating an urgent need for a sustainable, circular solution.
 
 
 ## 💡 Our Solution – Turning Waste into Wealth  
