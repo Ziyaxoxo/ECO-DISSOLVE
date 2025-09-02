@@ -1,5 +1,6 @@
 # ECO-DISSOLVE - Revolutionary Chemical Plastic Recycling for Environmental Restoration  🌍
-## **Team:** DeshSwadesh  
+## **Team:** DeshSwadesh 
+---
 
 ## 🚀 Overview  
 ECO-DISSOLVE is a **Waste to Wealth innovation** that goes beyond traditional recycling. Instead of simply reshaping plastics, our solution **chemically dissolves plastic waste into harmless compounds and reusable resources**, permanently removing it from the waste loop while creating new value streams.  
