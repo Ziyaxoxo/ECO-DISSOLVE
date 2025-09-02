@@ -23,9 +23,9 @@ India generates over 26,000 tonnes of plastic waste daily, yet only about 9% is 
 
 ## ⚙️ How It Works  
 - **Collection & Segregation** : Plastics are collected through community cooperatives and app-based incentives, with basic sorting at the source.  
-- **Bio-Dissolution Bath**  : Mixed and contaminated plastics are immersed in biocompatible solvents (ethylenediamine, propanediamine) at room temperature, avoiding high energy consumption.  
+- **Bio-Dissolution Bath**  : Mixed and contaminated plastics are immersed in biocompatible solvents (ethylenediamine, propanediamine), avoiding high energy consumption.  
 - **Enzyme-Assisted Depolymerization**  : Engineered enzymes selectively depolymerize plastics into their original monomer building blocks.  
-- **Monomer Recovery & Reuse**  : Purified monomers are extracted and supplied back as feedstock for manufacturing high-quality plastics and other industrial applications.  
+- **Monomer Recovery & Reuse** : By-products like TPA and ethylene glycol are extracted and sold as raw materials for diverse industries (e.g., textiles, resins, coatings), reducing reliance on virgin plastics and ensuring plastic waste does not re-enter the pollution cycle.  
 - **AI + IoT Optimization**  : Sensors and AI models continuously track process efficiency, safety, and recovery rates to enable large-scale scalability.  
 
 
