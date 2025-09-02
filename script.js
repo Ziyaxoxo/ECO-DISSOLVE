@@ -1,16 +1,16 @@
-// Header hide-on-scroll
-(() => {
+// Header hide on scroll
+(function () {
   const header = document.getElementById('site-header');
   let lastY = window.scrollY;
   let ticking = false;
 
-  const onScroll = () => {
-    const y = window.scrollY;
-    const goingDown = y > lastY && y > 24;
-    header.classList.toggle('hidden', goingDown);
-    lastY = y;
+  function onScroll() {
+    const currentY = window.scrollY;
+    const goingDown = currentY > lastY && currentY > 24;
+    header.classList.toggle('header--hidden', goingDown);
+    lastY = currentY;
     ticking = false;
-  };
+  }
 
   window.addEventListener('scroll', () => {
     if (!ticking) {
@@ -20,87 +20,113 @@
   }, { passive: true });
 })();
 
-// Smooth anchor scroll (progressive enhancement)
-(() => {
-  const navLinks = document.querySelectorAll('a[href^="#"]');
-  for (const link of navLinks) {
-    link.addEventListener('click', (e) => {
-      const targetId = link.getAttribute('href');
-      if (!targetId || targetId === '#') return;
-      const el = document.querySelector(targetId);
-      if (!el) return;
-      e.preventDefault();
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      history.pushState(null, '', targetId);
-    });
-  }
+// Mobile nav toggle
+(function () {
+  const toggle = document.querySelector('.nav__toggle');
+  const list = document.getElementById('nav-list');
+  if (!toggle || !list) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = list.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close menu when clicking a link
+  list.addEventListener('click', (e) => {
+    const target = e.target;
+    if (target && target.matches('a[href^="#"]')) {
+      list.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 })();
 
-// Waste→Wealth simulator
-(() => {
-  const form = document.getElementById('sim-form');
-  const results = document.getElementById('sim-results');
-  const outKg = document.getElementById('out-kg');
-  const outValue = document.getElementById('out-value');
-  const outEnergy = document.getElementById('out-energy');
-  const outCO2 = document.getElementById('out-co2');
+// Smooth anchor focus management
+(function () {
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((a) => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (!id || id === '#') return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      // Let browser scroll, then set focus for accessibility
+      setTimeout(() => el.setAttribute('tabindex', '-1'), 0);
+      setTimeout(() => el.focus({ preventScroll: true }), 350);
+    });
+  });
+})();
 
-  const baselineKWhPerKg = 4.5;   // thermal/pyrolysis baseline (approx)
-  const ecoKWhPerKg = 1.2;        // room-temp target band (≈3–4x lower)
-  const depolyEfficiency = 0.95;  // 95% PET benchmark
-  const solventRecovery = 0.95;
+// Waste → Wealth Simulator
+(function () {
+  const tonsEl = document.getElementById('tons');
+  const yieldEl = document.getElementById('yield');
+  const priceEl = document.getElementById('price');
+  const baseEl = document.getElementById('baseline');
+  const factorEl = document.getElementById('factor');
 
-  // stream multipliers
-  const stream = {
-    PET:        { recovery: 0.92, energyAdj: 1.00 },
-    MIXED_PACK: { recovery: 0.88, energyAdj: 1.10 },
-    CONTAM:     { recovery: 0.85, energyAdj: 1.15 },
-    E_WASTE:    { recovery: 0.90, energyAdj: 1.05 },
-  };
+  const yieldOut = document.getElementById('yieldOut');
+  const factorOut = document.getElementById('factorOut');
 
-  // contamination multipliers
-  const contam = {
-    LOW:  { recovery: 1.00, energyAdj: 1.00 },
-    MED:  { recovery: 0.97, energyAdj: 1.08 },
-    HIGH: { recovery: 0.94, energyAdj: 1.15 },
-  };
+  const divertedOut = document.getElementById('diverted');
+  const recoveredOut = document.getElementById('recovered');
+  const revenueOut = document.getElementById('revenue');
+  const co2Out = document.getElementById('co2');
+  const energySavedOut = document.getElementById('energySaved');
+  const energyPctOut = document.getElementById('energyPct');
 
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
+  function num(v) {
+    const n = typeof v === 'number' ? v : parseFloat(String(v).replace(/,/g, ''));
+    return isFinite(n) ? n : 0;
+  }
+  function fmtInt(v) { return Math.round(v).toLocaleString('en-IN'); }
+  function fmt1(v) { return (Math.round(v * 10) / 10).toLocaleString('en-IN'); }
 
-    const plastic = document.getElementById('plastic').value;
-    const contamLevel = document.getElementById('contam').value;
-    const volume = Math.max(0, Number(document.getElementById('volume').value || 0));
-    const pricePerKg = Math.max(0, Number(document.getElementById('price').value || 0));
+  function compute() {
+    const tons = num(tonsEl.value);
+    const y = num(yieldEl.value);
+    const price = num(priceEl.value);
+    const baseline = num(baseEl.value); // kWh/kg for traditional
+    const factor = num(factorEl.value); // times lower energy
 
-    const s = stream[plastic] || stream.PET;
-    const c = contam[contamLevel] || contam.LOW;
+    // Outputs
+    const diverted = tons; // tons/month processed
+    const recovered = tons * y; // tons/month monomers
+    const revenue = recovered * price; // ₹/month
 
-    const totalRecovery = Math.max(0, Math.min(1, depolyEfficiency * s.recovery * c.recovery * solventRecovery));
-    const recoveredKg = Math.round(volume * totalRecovery);
+    // CO2e avoided: ~1.2 tCO2e per processed ton (from proposal, scaled monthly)
+    const co2 = tons * 1.2;
 
-    const ecoEnergy = ecoKWhPerKg * s.energyAdj * c.energyAdj * volume;
-    const baselineEnergy = baselineKWhPerKg * volume;
-    const energySaved = Math.max(0, Math.round(baselineEnergy - ecoEnergy));
+    // Energy saved vs. traditional
+    // Traditional energy: baseline kWh/kg; ECO-DISSOLVE uses baseline/factor
+    // Saved per kg = baseline - baseline/factor = baseline*(1 - 1/factor)
+    const savedPerKg = baseline * (1 - 1 / Math.max(factor, 1));
+    const kg = tons * 1000;
+    const kWhSaved = savedPerKg * kg;
+    const MWhSaved = kWhSaved / 1000;
+    const pctSaved = (1 - 1 / Math.max(factor, 1)) * 100;
 
-    // CO2e heuristic: 1.2 t per 1,000 t pilot scale → scale linearly
-    const co2ePerKg = 1.2 / 1_000_000; // t per kg
-    const co2AvoidedT = (co2ePerKg * volume).toFixed(3);
+    divertedOut.textContent = fmtInt(diverted);
+    recoveredOut.textContent = fmtInt(recovered);
+    revenueOut.textContent = fmtInt(revenue);
+    co2Out.textContent = fmtInt(co2);
+    energySavedOut.textContent = fmt1(MWhSaved);
+    energyPctOut.textContent = `${fmt1(pctSaved)}%`;
+  }
 
-    // Value created (₹) — assume 1 USD ≈ ₹80, give a simple conversion without external sources
-    const usdToInr = 80;
-    const valueINR = Math.round(recoveredKg * pricePerKg * usdToInr);
+  // Update inline outputs for sliders
+  function updateInline() {
+    yieldOut.textContent = `${Math.round(num(yieldEl.value) * 100)}%`;
+    factorOut.textContent = `${fmtInt(num(factorEl.value))}×`;
+  }
 
-    outKg.textContent = recoveredKg.toLocaleString();
-    outValue.textContent = valueINR.toLocaleString();
-    outEnergy.textContent = energySaved.toLocaleString();
-    outCO2.textContent = co2AvoidedT;
-
-    results.hidden = false;
-    results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Bind events
+  [tonsEl, yieldEl, priceEl, baseEl, factorEl].forEach((el) => {
+    el.addEventListener('input', () => { updateInline(); compute(); });
+    el.addEventListener('change', () => { updateInline(); compute(); });
   });
 
-  form?.addEventListener('reset', () => {
-    results.hidden = true;
-  });
+  // Initialize
+  updateInline();
+  compute();
 })();
