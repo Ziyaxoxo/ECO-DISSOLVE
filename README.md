@@ -1,7 +1,7 @@
 # ECO-DISSOLVE - Revolutionary Chemical Plastic Recycling for Environmental Restoration  🌍
-### **Team:** DeshSwadesh 
-### **Problem statement title:** Real life solutions for Waste Management
-### **Theme:** Clean & Green Technology
+#### **Team:** DeshSwadesh 
+#### **Problem statement title:** Real life solutions for Waste Management
+#### **Theme:** Clean & Green Technology
 
 
 ## 🚀 Overview  
