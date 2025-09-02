@@ -1,5 +1,4 @@
-# ECO-DISSOLVE 🌍  
-### Revolutionary Chemical Plastic Recycling for Environmental Restoration  
+# ECO-DISSOLVE -  ### Revolutionary Chemical Plastic Recycling for Environmental Restoration  🌍
 ## **Team:** DeshSwadesh  
 
 ## 🚀 Overview  
